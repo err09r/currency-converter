@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_currency_title_size">24sp</dimen>
+    <dimen name="main_currency_rate_size">20sp</dimen>
+    <dimen name="main_currency_icon_size">24dp</dimen>
+    <dimen name="et_corner_radius">20dp</dimen>
+    <dimen name="et_width">160dp</dimen>
+    <dimen name="result_text_size">24sp</dimen>
+    <dimen name="currency_title_size">14sp</dimen>
+    <dimen name="currency_spinner_width">128dp</dimen>
+    <dimen name="currency_spinner_padding">16dp</dimen>
+    <dimen name="effective_date_size">16sp</dimen>
+    <dimen name="progressbar_size">64dp</dimen>
+    <dimen name="error_text_size">16sp</dimen>
+</resources>

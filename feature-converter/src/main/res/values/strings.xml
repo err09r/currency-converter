@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="effective_date">Last updated on: %s</string>
+    <string name="default_value">0.0</string>
+
+    <string name="dollar_code">USD</string>
+    <string name="euro_code">EUR</string>
+    <string name="pound_code">GBP</string>
+    <string name="yen_code">JPY</string>
+
+    <string name="zloty_title">złoty polski</string>
+    <string name="et_hint">Amount</string>
+    <string name="no_connection_snackbar">"No network connection. Connect to the network and restart the app to load fresh data"</string>
+
+    <string name="error_network">Something went wrong.\nCheck your internet connection and restart the app</string>
+    <string name="error_database">Database seems to be empty.\nConnect to the network to load data</string>
+    <string name="error_unknown">Unknown error occurred.\nTry reinstalling the app</string>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MainCurrencyTitleStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/main_currency_title_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MainCurrencyRateStyle">
+        <item name="maxLines">1</item>
+        <item name="android:maxLength">6</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:text">@string/default_value</item>
+        <item name="android:textSize">@dimen/main_currency_rate_size</item>
+    </style>
+
+    <style name="CurrencyTitleStyle">
+        <item name="android:textSize">@dimen/currency_title_size</item>
+    </style>
+
+    <style name="CurrencySpinnerStyle">
+        <item name="android:gravity">center</item>
+        <item name="paddingStart">@dimen/currency_spinner_padding</item>
+    </style>
+
+</resources>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/light_gray"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDollar"
+            style="@style/MainCurrencyTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/dollar_code"
+            app:layout_constraintEnd_toStartOf="@+id/tvEuro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivDollar" />
+
+        <TextView
+            android:id="@+id/tvEuro"
+            style="@style/MainCurrencyTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/euro_code"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDollar"
+            app:layout_constraintEnd_toStartOf="@+id/tvPound"
+            app:layout_constraintStart_toEndOf="@+id/tvDollar"
+            app:layout_constraintTop_toTopOf="@+id/tvDollar" />
+
+        <TextView
+            android:id="@+id/tvPound"
+            style="@style/MainCurrencyTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pound_code"
+            app:layout_constraintBottom_toBottomOf="@+id/tvEuro"
+            app:layout_constraintEnd_toStartOf="@+id/tvYen"
+            app:layout_constraintStart_toEndOf="@+id/tvEuro"
+            app:layout_constraintTop_toTopOf="@+id/tvEuro" />
+
+        <TextView
+            android:id="@+id/tvYen"
+            style="@style/MainCurrencyTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yen_code"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPound"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvPound"
+            app:layout_constraintTop_toTopOf="@+id/tvPound" />
+
+        <TextView
+            android:id="@+id/tvYenRate"
+            style="@style/MainCurrencyRateStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPoundRate"
+            app:layout_constraintEnd_toEndOf="@+id/tvYen"
+            app:layout_constraintStart_toStartOf="@+id/tvYen"
+            app:layout_constraintTop_toTopOf="@+id/tvPoundRate" />
+
+        <TextView
+            android:id="@+id/tvDollarRate"
+            style="@style/MainCurrencyRateStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="@+id/tvDollar"
+            app:layout_constraintStart_toStartOf="@+id/tvDollar"
+            app:layout_constraintTop_toBottomOf="@+id/tvDollar" />
+
+        <TextView
+            android:id="@+id/tvEuroRate"
+            style="@style/MainCurrencyRateStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDollarRate"
+            app:layout_constraintEnd_toEndOf="@+id/tvEuro"
+            app:layout_constraintStart_toStartOf="@+id/tvEuro"
+            app:layout_constraintTop_toTopOf="@+id/tvDollarRate" />
+
+        <TextView
+            android:id="@+id/tvPoundRate"
+            style="@style/MainCurrencyRateStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvEuroRate"
+            app:layout_constraintEnd_toEndOf="@+id/tvPound"
+            app:layout_constraintStart_toStartOf="@+id/tvPound"
+            app:layout_constraintTop_toTopOf="@+id/tvEuroRate" />
+
+        <ImageView
+            android:id="@+id/ivDollar"
+            android:layout_width="@dimen/main_currency_icon_size"
+            android:layout_height="@dimen/main_currency_icon_size"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_dollar"
+            app:layout_constraintEnd_toEndOf="@+id/tvDollar"
+            app:layout_constraintStart_toStartOf="@+id/tvDollar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivEuro"
+            android:layout_width="@dimen/main_currency_icon_size"
+            android:layout_height="@dimen/main_currency_icon_size"
+            android:src="@drawable/ic_euro"
+            app:layout_constraintBottom_toBottomOf="@+id/ivDollar"
+            app:layout_constraintEnd_toEndOf="@+id/tvEuro"
+            app:layout_constraintStart_toStartOf="@+id/tvEuro"
+            app:layout_constraintTop_toTopOf="@+id/ivDollar"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivPound"
+            android:layout_width="@dimen/main_currency_icon_size"
+            android:layout_height="@dimen/main_currency_icon_size"
+            android:src="@drawable/ic_pound"
+            app:layout_constraintBottom_toBottomOf="@+id/ivEuro"
+            app:layout_constraintEnd_toEndOf="@+id/tvPound"
+            app:layout_constraintStart_toStartOf="@+id/tvPound"
+            app:layout_constraintTop_toTopOf="@+id/ivEuro"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivYen"
+            android:layout_width="@dimen/main_currency_icon_size"
+            android:layout_height="@dimen/main_currency_icon_size"
+            android:src="@drawable/ic_yen"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPound"
+            app:layout_constraintEnd_toEndOf="@+id/tvYen"
+            app:layout_constraintStart_toStartOf="@+id/tvYen"
+            app:layout_constraintTop_toTopOf="@+id/ivPound"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="@dimen/et_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/et_hint"
+            app:boxCornerRadiusBottomEnd="@dimen/et_corner_radius"
+            app:boxCornerRadiusBottomStart="@dimen/et_corner_radius"
+            app:boxCornerRadiusTopEnd="@dimen/et_corner_radius"
+            app:boxCornerRadiusTopStart="@dimen/et_corner_radius"
+            app:expandedHintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAmountToConvert"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:hint="@string/default_value"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textSize="24sp"
+                tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvResultAmount"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:gravity="end|center_vertical"
+            android:maxLines="1"
+            android:paddingEnd="16dp"
+            android:text="@string/default_value"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/result_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tvTopCurrencyTitle"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tvTopCurrencyTitle"
+            style="@style/CurrencyTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            tools:text="dolar amerykański" />
+
+        <TextView
+            android:id="@+id/tvBottomCurrencyTitle"
+            style="@style/CurrencyTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvResultAmount"
+            app:layout_constraintTop_toBottomOf="@+id/tvResultAmount"
+            tools:text="euro" />
+
+        <Spinner
+            android:id="@+id/topSpinner"
+            style="@style/CurrencySpinnerStyle"
+            android:layout_width="@dimen/currency_spinner_width"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textInputLayout"
+            tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
+
+        <Spinner
+            android:id="@+id/bottomSpinner"
+            style="@style/CurrencySpinnerStyle"
+            android:layout_width="@dimen/currency_spinner_width"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvResultAmount"
+            app:layout_constraintStart_toStartOf="@+id/topSpinner"
+            app:layout_constraintTop_toTopOf="@+id/tvResultAmount"
+            tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="140dp" />
+
+        <TextView
+            android:id="@+id/tvEffectiveDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:textSize="@dimen/effective_date_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Last updated on: 01.01.1970" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/progressbar_size"
+        android:layout_height="@dimen/progressbar_size"
+        android:layout_gravity="center"
+        android:progressBackgroundTint="@color/primary_red"
+        android:visibility="invisible"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/errorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/error_text_size"
+        tools:text="Something went wrong.\nCheck your internet connection" />
+
+</FrameLayout>

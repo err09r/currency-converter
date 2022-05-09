@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/ic_dollar.png" />
+        <ignore path="src/main/res/drawable/ic_euro.png" />
+        <ignore path="src/main/res/drawable/ic_pound.png" />
+        <ignore path="src/main/res/drawable/ic_yen.png" />
+    </issue>
+</lint>
