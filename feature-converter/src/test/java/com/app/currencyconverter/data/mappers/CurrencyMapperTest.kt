@@ -28,8 +28,8 @@ class CurrencyMapperTest {
             currencyCode = testDto.currencyCode,
             rate = testDto.rate
         )
-        val actualEntity = CurrencyMapper.toDomainModelFromDto(testDto)
-        assertThat(actualEntity).isEqualTo(expectedItem)
+        val actualItem = CurrencyMapper.toDomainModelFromDto(testDto)
+        assertThat(actualItem).isEqualTo(expectedItem)
     }
 
     @Test
