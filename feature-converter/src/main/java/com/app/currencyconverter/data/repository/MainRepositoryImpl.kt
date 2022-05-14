@@ -81,7 +81,7 @@ class MainRepositoryImpl @Inject constructor(
 
     private fun performDatabaseRequest(): DataResponse<List<CurrencyEntity>> {
         val localData = currencyDao.getCurrencyList()
-        if (localData.isNullOrEmpty()) {
+        if (localData.isEmpty()) {
             return DataResponse.Failure(error = ErrorType.DATABASE)
         }
         return DataResponse.Success(content = localData)
